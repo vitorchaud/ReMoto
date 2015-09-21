@@ -48,18 +48,21 @@ public class BasicDAO
 				jdbcUrl = "jdbc:hsqldb:hsql://localhost/remoto";
 				
 				String path = ReMoto.path;
-				
+				/*
 				int startIndex = path.indexOf(".meta");
 				int endIndex = path.indexOf("remoto");
 				String replacement = "";
 				String toBeReplaced = path.substring(startIndex, endIndex);
 				
 				String path2 = path.replace(toBeReplaced, replacement).replace("\\", "/");
-				System.out.println(path2);
+				*/
+				String path2 = path.replace("\\", "/");
+				
+				//System.out.println(path2);
 				
 				System.out.println("CONNECTING TO " + jdbcUrl);
 				
-				String cmd = "java -cp " + path2 + "WebContent/WEB-INF/lib/hsqldb.jar org.hsqldb.Server -database.0 file:" + path2 + "WebContent/db/remoto -dbname.0 remoto";
+				String cmd = "java -cp " + path2 + "WEB-INF/lib/hsqldb.jar org.hsqldb.Server -database.0 file:" + path2 + "db/remoto -dbname.0 remoto";
 				Runtime.getRuntime().exec(cmd);
 				
 				con = DriverManager.getConnection( jdbcUrl, jdbcUser, jdbcPassword ); 
