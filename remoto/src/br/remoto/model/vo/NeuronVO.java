@@ -4,6 +4,8 @@ package br.remoto.model.vo;
 import br.remoto.model.ReMoto;
 import br.remoto.model.Neuron.NeuronProperties;
 
+//Modified in 05-10-11 by L. A. Elias
+
 public class NeuronVO extends NeuronProperties implements Comparable 
 {
 	private static final long serialVersionUID = 1L;
@@ -82,6 +84,18 @@ public class NeuronVO extends NeuronProperties implements Comparable
 	
 	// -------------------------
 	// Gk specific gets and sets 
+
+	public String getCategoryType() 
+	{
+		if( ReMoto.ALL.equals(type) || ReMoto.ALL.equals(category) )
+			return ReMoto.ALL;
+		else if( ReMoto.ACTIVE.equals(type) || ReMoto.ACTIVE.equals(category) )
+			return ReMoto.ACTIVE;
+	
+		return category + " " + type;
+	}
+	
+
 
 	public String getCategoryAndType() 
 	{
