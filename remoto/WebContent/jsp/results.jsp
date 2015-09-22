@@ -189,7 +189,7 @@ Current Version: 2.2 beta</div>
 <div class="first">
   <div class="second">
   <ul id="MenuBar" class="MenuBarHorizontal">
-    <li><a href="/remoto/overview.htm">Overview</a></li>
+    <li><a href="/remoto/quickguide.htm">Quick Guide</a></li>
     <li><a href="/remoto/general.do">Scenarios</a>      </li>
 <li><a class="MenuBarItemSubmenu">Structure</a>
   <ul>
@@ -225,7 +225,6 @@ Current Version: 2.2 beta</div>
       <ul>
         <li><a href="/remoto/stimulation.do">Nerve Stimulation</a></li>
         <li><a href="/remoto/injectedCurrent.do">Injected Current</a></li>
-        <li><a href="/remoto/biomechanicalInput.do">Biomechanical Input</a></li>
       </ul>
     </li>
     <li><a href="/remoto/start.do">Run</a></li>
